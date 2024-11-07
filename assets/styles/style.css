@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  font-family: 'mortalkombat2';
+  font-size: 30px;
+}
+
+@font-face {
+  font-family: 'mortalkombat2';
+  src: url('../fonts/mortalkombat2.ttf'); 
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 0px;
+}
+
+.red-container {
+  position: absolute;
+  display: flex;
+  width: 70%;
+  align-items: center;
+  padding: 20px;
+  left:220px;
+}
+
+.player-health-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.player-health-bar {
+  background-color: red;
+  height: 30px;
+  width: 100%;
+}
+
+#playerHealth {
+  position: absolute;
+  background: 	#002FA7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#timer {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 2px solid white;
+}
+
+.enemy-health-container {
+  position: relative;
+  width: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.enemy-health-bar {
+  background-color: red;
+  height: 30px;
+}
+
+#enemyHealth {
+  position: absolute;
+  background: 	#002FA7;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.player-name,
+.enemy-name {
+  position: absolute; 
+  color: white;
+  top: -20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  font-size: 20px; 
+  white-space: nowrap; 
+}
+
+.winner {
+  display: none; 
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: GOLD;
+  font-size: 10px;
+}
+
+.startMessage {
+  display: none; 
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(218, 2, 2);
+  font-size: 50px;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cc;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.cover h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.cover button {
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cover-active .red-container {
+  display: none;
+}
+
+.instructions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.instructions img {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.instructions button {
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

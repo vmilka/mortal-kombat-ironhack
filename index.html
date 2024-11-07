@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="shortcut icon" href="assets/images/interface/mk-logo-color.png">
+    <title>Mortal Kombat IronHack</title>
+</head>
+<body>
+  <div class="cover" id="cover">
+    <h1>Mortal Kombat: IronHack</h1>
+    <button id="startButton">Jugar</button>
+    <button id="instructionsButton">Como Jugar</button>
+    <button id="soundButton">Sonido: ON</button>
+  </div>
+
+  <div class="instructions" id="instructions" style="display: none;">
+    <img src="assets/images/stage/Instrucciones2.jpg" alt="Instrucciones" style="max-width: 80%; height: auto;">
+    <button id="closeInstructionsButton">Cerrar</button>
+  </div>
+
+  <div class="red-container" id="redContainer">
+    <div class="player-health-container">
+      <div class="player-name" id="playerName">LIU KANG</div>
+      <div class="player-health-bar"></div>
+      <div id="playerHealth"></div>
+    </div>
+
+    <div id="timer">60</div>
+ 
+    <div class="enemy-health-container">
+      <div class="enemy-name" id="enemyName">SHAO KHAN</div>
+      <div class="enemy-health-bar"></div>
+      <div id="enemyHealth"></div>
+    </div>
+  </div>
+    <div class="game-container">      
+    <canvas id="canvas"></canvas>
+    <div class="startMessage" id="startMessage" style="display: none;">FIGHT!</div>     
+    <div class="winner" id="winner" style="display: none;"><span id="winnerName"></span></div>
+    </div>
+    
+    <script type="text/javascript" src="assets/js/constants.js"></script>
+    <script type="text/javascript" src="assets/js/models/attackboxEnemy.js"></script>
+    <script type="text/javascript" src="assets/js/models/attackboxPlayer.js"></script>
+    <script type="text/javascript" src="assets/js/models/enemy.js"></script>
+    <script type="text/javascript" src="assets/js/models/player.js"></script>
+    <script type="text/javascript" src="assets/js/models/background.js"></script>
+    <script type="text/javascript" src="assets/js/models/game.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>    
+</body>
+</html>
